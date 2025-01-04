@@ -1,4 +1,3 @@
-# I am learning to use git !
 from tkinter import *
 from PIL import Image, ImageTk
 

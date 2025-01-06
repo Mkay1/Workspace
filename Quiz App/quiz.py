@@ -1,6 +1,7 @@
 from tkinter import *
 from PIL import Image, ImageTk
 
+
 root = Tk()
 root.title("QUIZ APP")
 root.geometry("400x700+1000+150")

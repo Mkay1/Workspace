@@ -55,21 +55,4 @@ btn = Button(root,text="Run", font=("arial",15, "bold"),bg="white", fg="black", 
 btn.pack(pady=20)
 Label(root, text="", font=("arial", 12, "bold"),bg="black", fg="white").pack(pady=5)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 root.mainloop()

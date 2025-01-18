@@ -15,26 +15,25 @@ image = ImageTk.PhotoImage(Img)
 label = Label(root, image=image)
 label.pack(pady=0)
 score = 0
-
 def correct():
-    l.config(text=("Correct"))
     score = score + 1
-    
+    l.config(text=("Correct"))
+    button1.config(command="")
+    button2.config(command="")
+
+   
 def incorrect():
     l.config(text=("Incorrect"))
-def end():
-    q.config(text=("The End"),font=("arial", 25))
-    l.config(text=("Thank you for trying out the quiz"))
-    button1.pack_forget()
-    button2.pack_forget()
+    button1.config(command="")
+    button2.config(command="")
 
 def next():
     q.config(text=("How many bones are in the human body?"))
     l.config(text=(""))
     button1.config(text=("300"))
     button2.config(text=("206"))
-    button2.config(command=correct)
     button1.config(command=incorrect)
+    button2.config(command=correct)
     button_next.config(command=next1)
 def next1():          
     q.config(text=("What is the hardest natural substance on Earth?"))
@@ -469,8 +468,12 @@ def next48():
     button2.config(command=correct)
     button_next.config(command=end)
     button_next.config(text=("End"))
-
-        
+def end():
+    q.config(text=("The End"),font=("arial", 25))
+    l.config(text=("Thank you for trying out the quiz"))
+    button1.pack_forget()
+    button2.pack_forget()
+   
 q = Label(root, text="What gas do living things need to survive ?", font=("arial", 15),bg="black" ,fg="white", wraplength=200)
 q.pack(pady = 30)
 
